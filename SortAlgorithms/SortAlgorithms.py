@@ -118,7 +118,8 @@ def heap_sort(v, length):
     heapify(v, length)
     while end > 0:
         v[0], v[end] = v[end], v[0]
-        print(v)
+        if n <= 10:
+            print(v)
         end -= 1
         shift_down(v, 0, end)
 
