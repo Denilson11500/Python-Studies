@@ -107,7 +107,7 @@ def shift_down(v, start, end):
 
 
 def heapify(v, length):
-    start = i_father(length - 1)
+    start = i_father(length)
     while start >= 0:
         shift_down(v, start, length - 1)
         start -= 1
@@ -166,5 +166,5 @@ if n <= 10:
 t0 = time()
 heap_sort(array4, len(array4))
 tf = time()
-print(f'Usando heap sort:\n{array2}')
+print(f'Usando heap sort:\n{array4}')
 print(f'Tempo usando heap sort: {tf-t0}')
