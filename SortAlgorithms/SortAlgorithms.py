@@ -15,6 +15,7 @@ def bubble_sort(v):
                 if n <= 10:
                     print(v)
                 sorted = False
+    return
 
 
 def quick_sort(v, start, end):
@@ -39,6 +40,7 @@ def quick_sort(v, start, end):
         quick_sort(v, start, j)
     if end > i:
         quick_sort(v, i, end)
+    return
 
 
 def merge(v, start, half, end):
@@ -70,6 +72,7 @@ def merge(v, start, half, end):
         k += 1
     if n <=10:
         print(f'{v1} + {v2} = {v[start:end+1]}')
+    return
 
 
 def merge_sort(v, start, end):
@@ -78,6 +81,7 @@ def merge_sort(v, start, end):
         merge_sort(v, start, half)
         merge_sort(v, half + 1, end)
         merge(v, start, half, end)
+    return
 
 
 def i_father(i):
@@ -135,7 +139,7 @@ for i in range(n):
     array3.append(array[i])
     array4.append(array[i])
 
-print(f'Vetor aleatório de tamanho {n} :\m')
+print(f'Vetor aleatório de tamanho {n} :\n')
 print(f'\nExecutando bubble sort, é lento para tamanhos muito grande:\n{array}')
 if n <= 10:
     print('Exibido o vetor após cada troca.')
